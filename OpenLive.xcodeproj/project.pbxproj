@@ -36,7 +36,7 @@
 /* Begin PBXFileReference section */
 		07130E891D22928200CC85D8 /* KeyCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyCenter.swift; sourceTree = "<group>"; };
 		0745273C1E9E050C0054D2D4 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
-		078012E91D1E57730093DE24 /* OpenLive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenLive.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		078012E91D1E57730093DE24 /* OpenLiveAudioTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenLiveAudioTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		078012EC1D1E57730093DE24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		078012EE1D1E57730093DE24 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		078012F11D1E57730093DE24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -114,7 +114,7 @@
 		078012EA1D1E57730093DE24 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				078012E91D1E57730093DE24 /* OpenLive.app */,
+				078012E91D1E57730093DE24 /* OpenLiveAudioTest.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -232,7 +232,7 @@
 			);
 			name = OpenLive;
 			productName = OpenLive;
-			productReference = 078012E91D1E57730093DE24 /* OpenLive.app */;
+			productReference = 078012E91D1E57730093DE24 /* OpenLiveAudioTest.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -496,7 +496,7 @@
 					"$(PROJECT_DIR)",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.agora.OpenLive;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = OpenLiveAudioTest;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -529,7 +529,7 @@
 					"$(PROJECT_DIR)",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.agora.OpenLive;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = OpenLiveAudioTest;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.2;

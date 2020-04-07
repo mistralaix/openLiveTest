@@ -109,19 +109,31 @@ class ViewerVC: UIViewController {
     }
     
     private func startStreaming() {
-        self.agoraKit.setClientRole(.broadcaster)
-        self.addLocalSession()
-        self.agoraKit.muteLocalAudioStream(true)
-        self.agoraKit.startPreview()
-        let session: AVAudioSession = AVAudioSession.sharedInstance()
-        try! session.setCategory(AVAudioSession.Category.playAndRecord, options: AVAudioSession.CategoryOptions.mixWithOthers)
+        guard let channelId = settings.roomName else {
+            return
+        }
+        self.agoraKit.leaveChannel { (_) in
+            self.agoraKit.setClientRole(.broadcaster)
+            self.addLocalSession()
+            self.agoraKit.muteLocalAudioStream(true)
+            self.agoraKit.startPreview()
+            let session: AVAudioSession = AVAudioSession.sharedInstance()
+            try! session.setCategory(AVAudioSession.Category.playAndRecord, options: AVAudioSession.CategoryOptions.mixWithOthers)
+            self.agoraKit.joinChannel(byToken: nil, channelId: channelId, info: nil, uid: 0, joinSuccess: nil)
+        }
     }
     
     private func stopStreamingAndRecording() {
+        guard let channelId = settings.roomName else {
+            return
+        }
         self.agoraKit.stopPreview()
-        self.agoraKit.setClientRole(.audience)
-        self.screenRecorder.stopRecording { (error) in
-            print("Recording stopped")
+        self.agoraKit.leaveChannel { (_) in
+            self.agoraKit.setClientRole(.audience)
+            self.agoraKit.joinChannel(byToken: nil, channelId: channelId, info: nil, uid: 0, joinSuccess: nil)
+            self.screenRecorder.stopRecording { (error) in
+                print("Recording stopped")
+            }
         }
     }
 

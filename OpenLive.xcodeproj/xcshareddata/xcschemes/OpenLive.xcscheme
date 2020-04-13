@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "078012E81D1E57730093DE24"
-               BuildableName = "OpenLive.app"
+               BuildableName = "OpenLiveAudioTest.app"
                BlueprintName = "OpenLive"
                ReferencedContainer = "container:OpenLive.xcodeproj">
             </BuildableReference>
@@ -27,6 +27,15 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "078012E81D1E57730093DE24"
+            BuildableName = "OpenLiveAudioTest.app"
+            BlueprintName = "OpenLive"
+            ReferencedContainer = "container:OpenLive.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <Testables>
          <TestableReference
             skipped = "NO">
@@ -39,17 +48,6 @@
             </BuildableReference>
          </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "078012E81D1E57730093DE24"
-            BuildableName = "OpenLive.app"
-            BlueprintName = "OpenLive"
-            ReferencedContainer = "container:OpenLive.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
-      <AdditionalOptions>
-      </AdditionalOptions>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -66,13 +64,11 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "078012E81D1E57730093DE24"
-            BuildableName = "OpenLive.app"
+            BuildableName = "OpenLiveAudioTest.app"
             BlueprintName = "OpenLive"
             ReferencedContainer = "container:OpenLive.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
-      <AdditionalOptions>
-      </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -85,7 +81,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "078012E81D1E57730093DE24"
-            BuildableName = "OpenLive.app"
+            BuildableName = "OpenLiveAudioTest.app"
             BlueprintName = "OpenLive"
             ReferencedContainer = "container:OpenLive.xcodeproj">
          </BuildableReference>

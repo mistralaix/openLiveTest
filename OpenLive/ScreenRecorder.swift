@@ -74,25 +74,21 @@ class ScreenRecorder
                         return
                     }
 
-                    if (bufferType == .video) {
-                        if self.videoInput.isReadyForMoreMediaData {
-                            DispatchQueue.main.async {
+                    DispatchQueue.main.async {
+                        if (bufferType == .video) {
+                             if self.videoInput.isReadyForMoreMediaData {
                                 self.videoInput.append(sample)
-                            }
-                        }
-                    } else if bufferType == .audioApp {
-                        if self.audioInput.isReadyForMoreMediaData {
-                            DispatchQueue.main.async {
+                             }
+                         } else if bufferType == .audioApp {
+                             if self.audioInput.isReadyForMoreMediaData {
                                 self.audioInput.append(sample)
+                             }
+                         } else if bufferType == .audioMic {
+                            if self.micInput.isReadyForMoreMediaData {
+                                self.micInput.append(sample)
                             }
                         }
-                    } else if bufferType == .audioMic {
-                       if self.micInput.isReadyForMoreMediaData {
-                        DispatchQueue.main.async {
-                            self.micInput.append(sample)
-                        }
-                       }
-                   }
+                    }
 
                 }
 
